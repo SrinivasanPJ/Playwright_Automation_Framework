@@ -1,0 +1,25 @@
+{
+  "name": "playwright-101-testmu-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright 101 certification assignment executed locally and on the TestMu AI cloud grid.",
+  "scripts": {
+    "test": "playwright test --config=playwright.config.ts",
+    "test:cloud": "playwright test --config=playwright.config.ts",
+    "test:local": "playwright test --config=playwright.local.config.ts",
+    "test:local:headed": "cross-env HEADED=true playwright test --config=playwright.local.config.ts",
+    "test:debug": "cross-env HEADED=true PWDEBUG=1 playwright test --config=playwright.local.config.ts --workers=1",
+    "report": "playwright show-report playwright-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "@types/node": "^22.15.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.8.3"
+  }
+}
